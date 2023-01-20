@@ -128,7 +128,7 @@ with col1:
 
 col2.altair_chart(alt.Chart(df)
     .mark_line()
-    .encode(x='team:N', y='rushes:P',color='team')
+    .encode(x='team:N', y='rushes:Q',color='team')
     .properties(title='Completed rushes by team',width=500))
 
 
@@ -249,7 +249,7 @@ with col1:
 
 col2.altair_chart(alt.Chart(df2)
     .mark_line()
-    .encode(x='team:N', y='rushes:O',color='team')
+    .encode(x='team:N', y='rushes:Q',color='team')
     .properties(title='Completed rushes by team',width=500))
 
 
