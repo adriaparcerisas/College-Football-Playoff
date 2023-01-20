@@ -14,10 +14,7 @@ import matplotlib.ticker as ticker
 import numpy as np
 import plotly.express as px
 import altair as alt
-
-
-st.title('College Football Playoff Trophy')
-
+st.set_page_config(page_title="College Football Playoff Trophy", layout="wide",initial_sidebar_state="collapsed")
 
 # In[20]:
 
