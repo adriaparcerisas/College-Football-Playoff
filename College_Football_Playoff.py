@@ -43,8 +43,8 @@ st.write('')
 
 # In[10]:
 
-df = pd.read_excel(r'offchain_football_1.xlsx')
-df2 = pd.read_excel(r'offchain_footbal_2.xlsx')
+df = pd.read_excel(r'docs\offchain_football_1.xlsx')
+df2 = pd.read_excel(r'docs\offchain_footbal_2.xlsx')
 
 # In[22]:
 
