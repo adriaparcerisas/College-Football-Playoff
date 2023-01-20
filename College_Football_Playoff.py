@@ -30,7 +30,6 @@ st.markdown('College Football Playoff officials commissioned the trophy for the 
 
 
 st.markdown('The intention of this analysis is to provide information about how the College Footbal Playoff 2022 evolved considering metrics such as:') 
-st.write('- ')
 st.write('- Teams')
 st.write('- Points')
 st.write('- Interceptions')
