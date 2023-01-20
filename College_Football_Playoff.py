@@ -121,13 +121,13 @@ col1,col2=st.columns(2)
 with col1:
     st.altair_chart(alt.Chart(df)
     .mark_line()
-    .encode(x='team:N', y='passes:Q',color='team')
-    .properties(title='Completed passes by team'))
+    .encode(x='team:N', y='passes',color='team')
+    .properties(title='Completed passes by team',width=500))
 
 col2.altair_chart(alt.Chart(df)
     .mark_line()
-    .encode(x='team:N', y='rushes:Q',color='team')
-    .properties(title='Completed rushes by team'))
+    .encode(x='team:N', y='rushes',color='team')
+    .properties(title='Completed rushes by team',width=500))
 
 
 # Create figure with secondary y-axis
