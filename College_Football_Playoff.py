@@ -14,6 +14,8 @@ import matplotlib.ticker as ticker
 import numpy as np
 import plotly.express as px
 import altair as alt
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 st.set_page_config(page_title="College Football Playoff", layout="wide",initial_sidebar_state="collapsed")
 st.title('College Football Playoff Trophy')
 
@@ -252,6 +254,7 @@ col2.altair_chart(alt.Chart(df)
 
 
 # Create figure with secondary y-axis
+fig2 = make_subplots(specs=[[{"secondary_y": True}]])
 
 fig2.add_trace(go.Line(x=df2['team'],
                 y=df2['rushing yards'],
