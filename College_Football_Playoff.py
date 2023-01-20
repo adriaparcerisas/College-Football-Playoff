@@ -44,7 +44,7 @@ st.write('')
 
 df = pd.read_csv("offchain_football_1.csv")
 
-df2 = pd.read_csv("offchain_football_2.csv")
+df2 = pd.read_csv("offchain_footbal_2.csv")
 # In[22]:
 
 st.subheader('College Football Playoff')
