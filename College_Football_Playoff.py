@@ -142,7 +142,7 @@ fig2.add_trace(go.Line(x=df['team'],
                 y=df['passing yards'],
                 name='# yards',
                 marker_color='rgb(11, 78, 154)'
-                , yaxis='y2'))
+                , yaxis='y'))
 
 fig2.update_layout(
     title='Rushing vs Passing yards by team',
@@ -158,8 +158,6 @@ fig2.update_layout(
     bargroupgap=0.1 # gap between bars of the same location coordinate.
 )
 # Set y-axes titles
-fig2.update_yaxes(title_text="Rushing yards", secondary_y=False)
-fig2.update_yaxes(title_text="Passing yards", secondary_y=True)
 
 st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
 
@@ -254,7 +252,6 @@ col2.altair_chart(alt.Chart(df)
 
 
 # Create figure with secondary y-axis
-fig2 = make_subplots(specs=[[{"secondary_y": True}]])
 
 fig2.add_trace(go.Line(x=df2['team'],
                 y=df2['rushing yards'],
@@ -265,7 +262,7 @@ fig2.add_trace(go.Line(x=df2['team'],
                 y=df2['passing yards'],
                 name='# yards',
                 marker_color='rgb(11, 78, 154)'
-                , yaxis='y2'))
+                , yaxis='y'))
 
 fig2.update_layout(
     title='Rushing vs Passing yards by team',
@@ -280,9 +277,6 @@ fig2.update_layout(
     bargap=0.15, # gap between bars of adjacent location coordinates.
     bargroupgap=0.1 # gap between bars of the same location coordinate.
 )
-# Set y-axes titles
-fig2.update_yaxes(title_text="Rushing yards", secondary_y=False)
-fig2.update_yaxes(title_text="Passing yards", secondary_y=True)
 
 st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
 
