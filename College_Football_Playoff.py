@@ -244,13 +244,13 @@ col1,col2=st.columns(2)
 with col1:
     st.altair_chart(alt.Chart(df)
     .mark_line()
-    .encode(x='team:N', y='passes:Q',color='team')
-    .properties(title='Completed passes by team'))
+    .encode(x='team', y='passes',color='team')
+    .properties(title='Completed passes by team',width=500))
 
 col2.altair_chart(alt.Chart(df)
     .mark_line()
-    .encode(x='team:N', y='rushes:Q',color='team')
-    .properties(title='Completed rushes by team'))
+    .encode(x='team', y='rushes',color='team')
+    .properties(title='Completed rushes by team',width=500))
 
 
 # Create figure with secondary y-axis
@@ -286,7 +286,7 @@ fig2.update_yaxes(title_text="Passing yards", secondary_y=True)
 
 st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
 
-fig3 = px.pie(df, values='touchdowns', names='team', title='Distribution of touchdowns by team')
+fig3 = px.pie(df2, values='touchdowns', names='team', title='Distribution of touchdowns by team')
 st.plotly_chart(fig3, theme="streamlit", use_container_width=True)
 
 
