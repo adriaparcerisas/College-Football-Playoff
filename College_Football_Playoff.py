@@ -137,12 +137,12 @@ fig2 = make_subplots(specs=[[{"secondary_y": True}]])
 
 fig2.add_trace(go.Line(x=df['team'],
                 y=df['rushing yards'],
-                name='# yards',
+                name='# rush yards',
                 marker_color='rgb(163, 203, 249)'
                 , yaxis='y'))
 fig2.add_trace(go.Line(x=df['team'],
                 y=df['passing yards'],
-                name='# yards',
+                name='# pass yards',
                 marker_color='rgb(11, 78, 154)'
                 , yaxis='y'))
 
@@ -170,7 +170,9 @@ st.plotly_chart(fig3, theme="streamlit", use_container_width=True)
 
 # In[6]:
 
-
+st.write('')
+st.markdown('As a conclusions, we can see that the most interesting match was those played by Michigan vs Texas, who generated more yards and scored more points. In this match were more interceptions and turnovers than in the Georgia vs Ohio match. During the playoffs, Texas was the team with the highest number of tuchdowns.')
+st.write('')
 st.subheader('National Championship Game')
 st.write('The second part of this app analyzes the final game between top 2 teams over the current season who passed the previous College Football Playoffs, which have been the University of Georgia and the University of Michigan. These 2 teams played the final match to win the National Championship Game.')
 st.write('The metrics to be analyzed from there are:')
@@ -286,8 +288,10 @@ st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
 fig3 = px.pie(df2, values='touchdowns', names='team', title='Distribution of touchdowns by team')
 st.plotly_chart(fig3, theme="streamlit", use_container_width=True)
 
-
 st.write('')
+st.markdown('As a conclusions, we can see how there was an important difference in points in the final match, in favour of Georgia team, who generated 3 turnovers for the rival team and didnt lose the possession at any time. In both, passes and rushes Georgia was better than Texas. The major difference between these teams was in the amount of touchdowns achieved, Georgia was abel to generate 9 touchdowns while Texas only a single one. So, it seems that the Trophy was designated for the best team with the better performance during the playoff, which played a great final match.')
+st.write('')
+
 st.markdown('This app has been done by **_Adrià Parcerisas_**, a PhD Biomedical Engineer related to Machine Learning and Artificial intelligence technical projects for data analysis and research, as well as dive deep on-chain data analysis about cryptocurrency projects. You can find me on [Twitter](https://twitter.com/adriaparcerisas)')
 st.write('')
 st.markdown('The full sources used to develop this app can be found to the following link: [Github link](https://github.com/adriaparcerisas/College-Football-Playoff)')
